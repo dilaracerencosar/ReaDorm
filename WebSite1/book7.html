@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="heights.jpg" alt="Book 7">
+                </div>    
+               
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Wuthering Heights</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>At the centre of this novel is the passionate love between Catherine Earnshaw and Heathcliff - recounted with such emotional intensity that a plain tale of the Yorkshire moors acquires the depth and simplicity of ancient tragedy.
+                    This best-selling Norton Critical Edition is based on the 1847 first edition of the novel. For the Fourth Edition, the editor has collated the 1847 text with several modern editions and has corrected a number of variants, including accidentals. The text is accompanied by entirely new explanatory annotations.                 
+                    New to the fourth Edition are twelve of Emily Bronte's letters regarding the publication of the 1847 edition of Wuthering Heights as well as the evolution of the 1850 edition, prose and poetry selections by the author, four reviews of the novel, and poetry selections by the author, four reviews of the novel, and Edward Chitham's insightful and informative chronology of the creative process behind the beloved work.                   
+                    Five major critical interpretations of Wuthering Heights are included, three of them new to the Fourth Edition. A Stuart Daley considers the importance of chronology in the novel. J. Hillis Miller examines Wuthering Heights's problems of genre and critical reputation. Sandra M. Gilbert assesses the role of Victorian Christianity plays in the novel, while Martha Nussbaum traces the novel's romanticism. Finally, Lin Haire-Sargeant scrutinizes the role of Heathcliff in film adaptations of Wuthering Heights.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Emily Brontë
+                </p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/Kitap/Wuthering-Heights/Foreign-Languages/Literature-And-Novel/Classics/urunno=0000000678856" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Chelsea: I've tried it three times. I know people are obsessed with it. I hate everyone in the book - and I just can't care about a book where I actually hate the characters.
+                    And, sure, I get the interpretation that as terrible as Heathcliff and Cathy are, it's their love that redeems them, and isn't that romantic.
+                    No.</p>
+            </div>
+            <div id="comment">
+                <p>Margaret: 5 tormenting and passionate stars for a reading experience like no other, because never have I read a book that altered my emotions so many times in one book. My feelings moved in waves between compassion and despair, admiration and loathing, pity but always regret. Victims or tormentors – that’s for you to decide.
+                    For me, Wuthering Heights is an epic and timeless classic that has everything; obsession, greed, revenge, grief, emotional abuse, inequality, and even light horror. Everything except the thing most associated with this story. In my opinion, this is not a love story – it is the most beautiful love story that never happened, and in that lies the tragedy and the power of this book.</p>
+            </div>
+            <div id="comment">
+                <p>Adina: There are some books that you either love of hate; there is not much middle ground. Like some types of food. Marmite or licorice come to mind. Wuthering Heights is one of those books. Since I started using GR I have read many conflicting reviews for this book and they made me increasingly curios to find out which side I would take. Unfortunately, I am more with the hate party.
+                    I will not write a long review here as it was done thousands of times. I will only say that the book took all the joy of living from me and put me into a reading slump from which I hope to heal quickly. After I finished this last night I was considering what to read next and I realized I did not want to read anything for a while, I felt catatonic.
+                    I believe I started the book on a wrong foot. I was expecting a love story, which in my opinion it is not. Instead, I think this is a very well done study of two sociopaths, pathologically obsessed with each other who manage to destroy the life of everyone they know for the fun of it. Their ability to hurt others and each other is so extraordinary that I might consider this book from the paranormal genre. 
+                    Yes, I appreciate that the novel is revolutionary for the period and so on but I did not enjoy it at all. Dear friends that love this novel, I am really sorry I did not like it more and I hope you will not take it personally.
+                    Disclaimer: I read it in Romanian, the way I prefer to read all Victorian novels in order to avoid the archaic language. Maybe I was lost in translation.</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

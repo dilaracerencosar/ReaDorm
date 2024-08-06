@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+        
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="wind.jpg" alt="Book 10">
+                </div>    
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>The Name of the Wind</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>Told in Kvothe's own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen.
+                    The intimate narrative of his childhood in a troupe of traveling players, his years spent as a near-feral orphan in a crime-ridden city, his daringly brazen yet successful bid to enter a legendary school of magic, and his life as a fugitive after the murder of a king form a gripping coming-of-age story unrivaled in recent literature.    
+                    A high-action story written with a poet's hand, The Name of the Wind is a masterpiece that will transport readers into the body and mind of a wizard.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Patrick Rothfuss
+                </p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/Kitap/The-Name-of-the-Wind-The-Kingkiller-Chronicle-1/Patrick-Rothfuss/Foreign-Languages/Literature-and-Novel/Sci-Fi-Fantasy/urunno=0000000666683" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Shannon: This is why I love fantasy so much. After a recent string of okay fantasy novels, a couple of good ones but nothing to get really excited about, I've rediscovered my passion thanks to this book. I'm so impressed, and so in love, I can't begin to describe it. But I can try to give you a feel for the book, if I can figure out where to start and how to do justice to this masterpiece.</p>
+            </div>
+            <div id="comment">
+                <p>Danica: Okay. Wow. Let's back the hell up here. How is this so highly rated? Are those genre-establishment reviewers who're thrashing about in paroxysms of fawning five-star NEXT BIG THING OMG joy wearing blinders or just so used to mediocre fantasy that this book actually comes across looking good in comparison? Why do these high fantasy disappointments keep on keeping on? Whose brilliant idea was it to throw around the GRRM and Harry Potter comparisons, thereby actually getting me to waste my pennies on this book when the money could've been better spent, I dunno, on some new dish sponges or perhaps bundled together into a lump sum donation to the Feminist Fantasy Writer Foundation? And for God's sake, why do male fantasy writers always write about do-everything, know-it-all male heroes who vanquish dragons, defeat their conniving rivals, strangle angels, and literally walk through fires /carrying weeping females over their shoulders like sacks of potatoes/????</p>
+            </div>
+            <div id="comment">
+                <p>Mark Lawrence: I'll give this 5* with no begrudging. I'm pretty easy with my 5*, they're not reserved for the best book I've ever read, just very good books. I thought The Name of the Wind was "very good". I read it in what for me was a very short span of time - it had that 'more-ish' quality that best sellers need.
+                    Can I see what makes this the single best selling epic fantasy for a generation (apart from George Martin's series)? No. Excepting that perhaps the lesson is that to be head and shoulders above your competition in sales "all" you need is to be better by a nose - after that the non-linear dynamics of the market take over and elevate you to godhood.       
+                    I loved the writing, and that's very important to me. Rothfuss often treads the thin line between prose and poetry, and fortunately it's excellent poetry that he brushes up against. The quality of the writing breathes magic into even fairly ordinary scenes, and makes some of the important ones extraordinary.</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

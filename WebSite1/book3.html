@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="book3.jpg" alt="Book 3">
+                </div>    
+        
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Where The Crawdads Sing</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>Kya is the youngest of five siblings in an isolated North Carolina marsh. But after her mother disappears, followed by each of her four siblings and, finally, her abusive alcoholic father, she's left alone. Thanks to her relationship with her lush natural surroundings (and the kindness of a few neighbors), Kya manages to grow into a tough, capable young adult. Although folks in the fishing village tend to avoid the "Marsh Girl," she craves human connection and falls for two different young men. When one turns up dead, how can misunderstood Kya escape the blame? <br>The story asks how isolation influences the behavior of a young woman, who like all of us, has the genetic propensity to belong to a group. The clues to the mystery are brushed into the lush habitat and natural histories of its wild creatures.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Delia Owens</p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/kitap/kyanin-sarki-soyledigi-yer/edebiyat/roman/dunya-roman/urunno=0001806895001" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Debra: Can I just say that I loved everything about this book and leave it at that!? Where the Crawdads Sing is a story of resiliency, survival, hope, love, loss, loneliness, desperation, prejudice, determination and strength. This book goes back and forth in time to tell the story of Kya Clark a.k.a. the Marsh girl. She lives on the outskirts of town, in the Marsh, and the locals look down their noses at her, she is judged, ridiculed and bullied. But there are those who show her kindness, friendship, and show her love. Oh, how I loved this book!</p>
+            </div>
+            <div id="comment">
+                <p>Brandy: Wow. Like so many people, I read this book because my book club chose it. Unlike so many people, I am not impressed. Not even a little bit. A lot of times when a book is rated this high, I tend to think it's me and not the book. But nope. This time I fully believe it's the book. This will be ranty and in the order in which things made me want to rant. No apologies.</p>
+            </div>
+            <div id="comment">
+                <p>Dianna: This book is beautifully written and contains poetry and vivid descriptions of the Marsh. I highly recommend this book! It's thoughtful, evokes emotion, and transports the reader back in time to the Marsh. I loved every page.</p>
+            </div>
+            <div id="comment">
+                <p>Karen: I can't even imagine how this book has a 4+ star rating. The characters, including the protagonist, are so simplistic as to be unbelievable. The plot is trite. The dialog is atrocious...and offensive. A girl who basically raises herself in a swamp speaks perfect King's English while every black character "goes 'round speakin' like they done did grow up in dat dar barn." I'm 50 pages from the end, and I refuse to waste another minute reading this. Also, I usually put the books I finish in my Little Free Library, but I'm throwing this one in the recycling bin.</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

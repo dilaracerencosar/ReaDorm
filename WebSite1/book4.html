@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="blindness.jpg" alt="Book 4">
+                </div>    
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Blindness</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>A city is hit by an epidemic of "white blindness" that spares no one. Authorities confine the blind to an empty mental hospital, but there the criminal element holds everyone captive, stealing food rations, and assaulting women. There is one eyewitness to this nightmare who guides her charges—among them a boy with no mother, a girl with dark glasses, a dog of tears—through the barren streets, and their procession becomes as uncanny as the surroundings are harrowing. As Blindness reclaims the age-old story of a plague, it evokes the vivid and trembling horrors of the twentieth century, leaving readers with a powerful vision of the human spirit that's bound both by weakness and exhilarating strength.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> José Saramago
+                </p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/Kitap/Blindness/Foreign-Languages/Literature-And-Novel/Literature/urunno=0000000549599" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Renato: Blindness is a great novel by Portuguese writer José Saramago that deals with human's individual and collective reactions when in the face of adversarial forces. With gorgeous prose, this thought-provoking book shows us how our world, ever so concerned and consumed by appearances, would deal with the loss of our most relied upon sense: vision. When it's every man by himself, when every man is free to do whatever he wants without the impending fear of recognition and judgement, we start to feel - I was going to say see - what the man's true nature is and the crumbling down of a civilization diseased with selfishness, intolerance and ambition, to name just few symptoms.</p>
+            </div>
+            <div id="comment">
+                <p>Paul:What kind of a person is it who relishes reviewing the books he hates and quails at the thought of reviewing his five-star books?
+                    It would appear that that could be a description of me. Well, the reason's obvious - it's great fun to boot a bad book and some bad ideas all around this site, a chance for a few jokes, a laugh, a song and a hand grenade, a couple of pints of Scruttock's Old Dirigible and everyone goes home with a smile on their face, no harm done. Not so easy to describe greatness, something so strange and awe-inspiring that your keyboard falls silent, abashed. So this is the book, this Blindness novel, which was so hard to read, so painful, so strange, so brilliant, that I don't really want to sing its praises or recommend it to everyone because everyone won't like it and those who do might not be glad they read when they finally fall over the threshhold of the last page back into the light of some sort of sanity and order we hope, and look back and shudder. Well. You have to read this one, but I didn't tell you to.</p>
+            </div>
+            <div id="comment">
+                <p>Seemita: Beauty lies in the eyes of the beholder. What an irony that a book which holds, loss, filth, loot, stomp, cruelty, disorientation, putrefaction, injustice, helplessness, murder, rape, misery, nakedness, abandonment, death and unimaginable suffering in its bosom, left me with a climactic emotion of beauty, overwhelming beauty! Beauty of what you ask? That of resilience, that of courage, that of insurmountable human spirit which perhaps hits its zenith when it is brutally pinned to the bottommost pit.</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

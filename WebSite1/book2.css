@@ -1,0 +1,241 @@
+body {
+    font-family: Abril Fatface, sans-serif;
+    background-color: #FFE9CC;
+    margin: 10;
+    padding: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 60px; /
+    
+  }
+  
+  .bookPage{
+    margin-left: 200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  #bookPage-left{
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 200px;
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+  }
+
+  #bookPage-right{
+    display: block;
+    position: relative;
+    top: 15px;
+    left: 250px;
+    padding: 20px;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #book-details{
+    z-index: 1;
+  }
+
+  #book-image{
+    position: sticky;
+    width: 200px;
+  height: 300px;
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  }
+  
+  .responsiveImg{
+    display: block;
+  position: fixed;
+  height: auto;
+  width: 735px;
+    top: 705px;
+    left: 189px;
+}
+
+  h2{
+    color: #450202;
+    display: block;
+    margin: 0;
+    font-size: 1cm;
+    font-weight: bold;
+  }
+
+  #purchase-button {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #1F4502;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  #summary {
+    flex-grow: 1;
+    font-size: 20px;
+  }
+
+  #writer{
+    font-size: 20px;
+  }
+
+  #commentsBlock{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 250px;
+    padding: 20px;
+    z-index: 1;
+    width: 100%;
+  }
+
+  #comment{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fffbee;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    .bookPage {
+        flex-direction: column; /* Alt alta sıralama */
+    }
+
+    #bookPage-left {
+        width: 14%; /* Örneğin, sol blokun genişliğini belirli bir yüzde olarak ayarlayabilirsiniz */
+        margin-right: 20px;
+    }
+
+    #bookPage-right {
+        width: 70%; /* Örneğin, sağ blokun genişliğini belirli bir yüzde olarak ayarlayabilirsiniz */
+    }
+
+    #commentsBlock{
+      width: 70%;
+    }
+}
+  
+/*  .books-container {
+  width: 50%;
+  display: flex; 
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+  margin: 0;
+  }
+
+  .book {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+*/
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: right;
+    vertical-align: middle;
+  }
+
+/*  
+  .book p {
+    margin-top: 10px; 
+  }
+*/  
+  
+#nav-content {
+  background-color: #694a30;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 300px !important; /* Add !important to increase specificity */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+#nav-content ul {
+  list-style: none;
+  padding: 10;
+}
+#inside-content ul{
+  list-style: none;
+  padding: 10;
+}
+#inside-content ul li {
+  margin-bottom: 40px;
+  margin-top: 60px; 
+  margin-left: 10px;
+  margin-right: 30px;
+}
+#inside-contentt a {
+  text-decoration: none;
+  color: rgb(196, 150, 66);
+}
+
+#inside-contenta:hover {
+  color: #1f1400;
+}
+
+
+#nav-content ul li {
+  margin-bottom: 40px;
+    margin-top: 60px; 
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+#nav-content a {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-content a:hover {
+  color: #ffc04c;
+}
+
+#main-content {
+  margin-left: 200px; /* Adjust based on your side menu width */
+  padding: 20px;
+}
+#search-bar {
+width: 200px; /* Adjust the width as needed */
+padding: 5px;
+}
+header {
+  background-color: #472003;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}

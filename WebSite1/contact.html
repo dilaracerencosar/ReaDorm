@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style1.css">
+        <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script> 
+        <style>
+              form {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-left: 50px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        #instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        button {
+            background-color: #1F4502;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+        </style>
+    </head>
+    <body>
+        <header>
+            ReaDorm
+           <a href="proje.aspx">Sign In</a>
+       </header>
+        <div id="Contact">
+            <h1>Please Help ReaDorm For Better Service</h1>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                 <input type="text" id="name" name="name" required placeholder="">
+
+                  <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="">
+
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+            <div id="overlay"></div>
+
+    <div id="popup">
+        <p>Thank you for contacting us!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <script>
+        // Check if user is logged in
+        var loggedInUserName = '<%= Session["LoggedInUserName"] %>';
+        var loggedInUserEmail = '<%= Session["LoggedInUserEmail"] %>';
+    
+        // Fill the fields if user is logged in
+        if (loggedInUserName && loggedInUserEmail) {
+            document.getElementById("name").value = loggedInUserName;
+            document.getElementById("email").value = loggedInUserEmail;
+        }
+    </script>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); 
+
+         
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+
+            //  reset the form fields after submission
+            document.getElementById('contact-form').reset();
+        }
+
+        function closePopup() {
+          
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+        </div>
+
+
+        <div id="nav-content" tabindex="0">
+            <ul>
+                <li><a href="pagehome.html">Home</a></li>
+                <li><a href="proje1.html">Main Page</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="small">
+                  <a href="#0"  onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i>  Facebook</a>
+                  
+              </li>
+              <li>
+                <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i>  Instagram</a>
+              </li>
+              <li>
+                <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+              </li>
+            </ul>
+        </div>
+      <br>
+      <div id="instagram-popup">
+  
+        <p>We are currently working on this :) </p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+
+        function closeInstagramPopup() {
+   
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+      <br>
+    </body>
+</html>

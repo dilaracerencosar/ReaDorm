@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+h5{
+    color:  #450202;
+}
+button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="snow.jpg" alt="Book 1">
+                </div>  
+               
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Spring Snow</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>A Spring Snow is a coming-of-age story with boy named Kiyoaki set in the early Taishō of Japan. Kiyoaki then falls in love with this girl named Satoko, but she then gets married to another man and their relationship becomes a tragic affair. The outcome of all of this is something I thin only Mishima readers would understand or predict. I would say this is a romance, but a very tragic one similar to Romeo and Juliet, but perhaps more selfish.
+
+                    Besides Spring Snow being a romance, this book also covers a ton of other genres. This is a historical fiction, a political and family drama, and even covers religious philosophy. This is the first book of a four part series. Over all the series is about a Japanese man named Honda who witness the reincarnation of his friend Kiyoaki four times, thus each book is about the four reincarnations. I'm assuming the ton of each book changes too.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span>Yukio-Mishima</p>
+                <hr>
+                <a id="purchase-button" href="https://www.amazon.com.tr/Spring-Snow-Fertility-Yukio-Mishima/dp/0099282992?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1UNQM1SR2CHM">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Adam Dalva: A brilliant first salvo in the Sea of Fertility tetralogy, setting up questions of reincarnation, cultural continuity, and faith while working as a stand-alone novel. I'm curious to continue my journey through these books - they are an odd mixture of the researched nostalgia of the Ferrante series and the self-sufficient decade spanning approach of the Rabbits or the Zuckermans.</p>
+            </div>
+            <div id="comment">
+                <p>Bonnie: Mishima, like other great writers, has a way of implanting memories in our heads, echoes of other lives. How this magic happens is a mystery but when it does, you feel somehow denser inside, more solid. Spring Snow left me with that feeling, of having increased my gravity and weight, with the lyrical descriptions, history, characters, ceremonies, letters, political intrigue, birds and emerald rings and emerald snakes, and silk kimonos, and more.</p>
+            </div>
+            <div id="comment">
+                <p>Sana: Has there ever been a stranger novelist than Yukio Mishima? On the one hand, he was a body-building Nationalist, who advocated bushido, the samurai code; he also, as many know, committed seppuku, which is a ritual form of suicide involving disembowelling and beheading. You don’t, it is fair to say, get that kind of thing with Julian Barnes and Karl Ove Knausgaard.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

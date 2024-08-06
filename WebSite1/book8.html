@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+      
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="murder.jpg" alt="Book 8">
+                </div>    
+                
+            </div>
+
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Murder on the Orient Express</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>Just after midnight, a snowdrift stops the famous Orient Express in its tracks as it travels through the mountainous Balkans. The luxurious train is surprisingly full for the time of the year but, by the morning, it is one passenger fewer. An American tycoon lies dead in his compartment, stabbed a dozen times, his door locked from the inside.
+                    <br>
+                    One of the passengers is none other than detective Hercule Poirot. On vacation.
+                    <br>
+                    Isolated and with a killer on board, Poirot must identify the murderer—in case he or she decides to strike again.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Agatha Christie</p>
+                <hr>
+                <a id="purchase-button" href="https://www.amazon.com/Murder-Orient-Express-Hercule-Mysteries/dp/0062073494/ref=sr_1_1?crid=NFA16BXPJHFK&keywords=Murder+on+the+Orient+Express&qid=1703533427&s=books&sprefix=murder+on+the+orient+express%2Cstripbooks-intl-ship%2C444&sr=1-1" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Zoe: This was my first Agatha Christie novel and it definitely did not disappoint! I was not expecting that ending, which is obviously a good thing in a murder mystery story, but I am proud of myself for picking up on some other clues. I am so impressed by how she was able to weave this intricate of a story in only 200 pages and I can't wait to pick up another one of her novels in the future!</p>
+            </div>
+            <div id="comment">
+                <p>Matthew: I fear it is impossible to say too much about this book without spoilers. Because of this I will be brief so you can never go back and say, "I would have loved this book, but that Matthew guy from Goodreads ruined it for me!" So, here is my quick but hopefully useful review.This is a classic mystery. You like mysteries? You have to have to read this!
+                    <br>
+                    Characters are great! So much fun meeting and learning about them all.
+                    Current mysteries have nothing on Christie. This is very intricate and very fun to watch the clues be put together and the solution come into focus. But, now I am getting too close to spoilers.
+                    Read it! It's good!</p>
+            </div>
+            <div id="comment">
+                <p>Marry: For those readers that like to put themselves into Hercule Poirot’s character and try their luck at solving the murder, this book is handmade for you. But beware! Poirot is an amazing sleuth with uncanny deduction abilities. It is a hard act to follow even though there are clues aplenty. ‘Murder on the Orient Express’ is Christie’s most famous work, with 3 movies based on it. I fear that it would be redundant to go over the specifics of the site and situation of the murder. A large part of the book is devoted to Poirot interviewing the suspects, and it is only the great personality of the detective that carries the plot forward thereby avoiding falling into a tedious slog. I was captivated by the interviews, with meeting such an array of great characters. The dialogue in the interrogations was some of the most edgy and enlightening in the book. I liked the way Christie went over the clues (and red herrings) several times, apparently so that the reader could keep up. Only problem was, that it was still difficult to keep all the who-said-what-when straight. The ending. One has to forgo believability a bit, but it was indeed memorable, and for me, unpredictable. In the end I was proud of Poirot and his astonishing powers of reason. A fun read.</p>
+            </div>
+            <div id="comment">
+                <p>Kindle: Murder on the orient express is a great whodunit from the master. Even knowing the solution, I enjoy rereading it. The characters are so human, as always in Agatha Christie novels, but still so entertaining.</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

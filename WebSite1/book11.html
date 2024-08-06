@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="martineden.jpg" alt="Book 11">
+                </div>    
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Martin Eden</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>The semiautobiographical Martin Eden is the most vital and original character Jack London ever created. Set in San Francisco, this is the story of Martin Eden, an impoverished seaman who pursues, obsessively and aggressively, dreams of education and literary fame. London, dissatisfied with the rewards of his own success, intended Martin Eden as an attack on individualism and a criticism of ambition; however, much of its status as a classic has been conferred by admirers of its ambitious protagonist.
+                    Andrew Sinclair's wide-ranging introduction discusses the conflict between London's support of socialism and his powerful self-will. Sinclair also explores the parallels and divergences between the life of Martin Eden and that of his creator, focusing on London's mental depressions and how they affected his depiction of Eden.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Jack London</p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/Kitap/Martin-Eden-Modern-Klasikler-38/Jack-London/Edebiyat/Roman/Dunya-Klasik/urunno=0000000608697" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Chris Shank: This is one of the best books I've ever read. A remarkable attempt by Jack London in dissecting a person's evolution of being as they happen upon the path of enlightenment. Martin Edin (M.E.--a hint at the author's identification with the hero?) is a roughneck sailor who is blinded and transformed by the inner and outer beauty of a woman he meets, but this is just the beginning. Looking into her eyes he caught, "glimpses of the soul, and a glimpse of his own too." His former mode of being had come to an end.</p>
+            </div>
+            <div id="comment">
+                <p>Simona: It is astounding how long it took for me to digest this book -and I say this in nothing but praise. Honestly, it's not like I'm sure the process is completed; I tend to believe the best books are the ones you never wholly digest, the ones that keep nagging at your mind for weeks, months, years, forever, too, if that is what it takes. And the best books are, also, the ones that, lo and behold, turn out to be but little mirrors of yourself - and more often than not, very much to your own dismay, shame, embarrassment and a tiny, timid ember of inner joy.
+                    For me, Martin Eden was both.</p>
+            </div>
+            <div id="comment">
+                <p>Sarah: Alright, when I first started reading it, I was very touched by the loving connection that the main character (Martin Eden) had with Ruth. It was very sweet, and at times it reminded me of my own relationship with my boyfriend, which made it endearing and all the more special to read. Jack London wrote of how Ruth would feel relieved from her studying at the university to see Martin, and how his presence rejuvenated her and gave her a better sense of being. I really really loved that. But, I was aware of the premise (Martin Eden: a guy struggling to become an accomplished and famous writer), so I quickly brushed away the idea of it being a love story, and I was totally cool with that! To be perfectly honest, though, the EARLY relationship between them was the only part of the book I was really fond of, which happened to be only like the first 100 pages.</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

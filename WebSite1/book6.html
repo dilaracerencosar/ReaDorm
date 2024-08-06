@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+        
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="alchemist.jpg" alt="Book 6">
+                </div>    
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>The Alchemist</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>Combining magic, mysticism, wisdom, and wonder into an inspiring tale of self-discovery, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers across generations.
+                    Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, recognizing opportunity and learning to read the omens strewn along life's path, and, most importantly, following our dreams.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Paulo Coelho
+                </p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/Kitap/The-Alchemist/Foreign-Languages/Literature-And-Novel/Literature/urunno=0001785372001" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Kenny: I preface my review by saying I am amazed how wildly passionate people are in their feelings toward this novel ~~ regardless of whether they love or hate The Alchemist. I’m one of those people who love it. But, I understand why people are so passionate in their dislike of this work. Paul Coelho looks to inspire passion in people with The Alchemist. And he succeeds in doing so ~~ especially in those who are so passionate in their dislike of this book.</p>
+            </div>
+            <div id="comment">
+                <p>Amanda: I'm not sure that I can capture my utter disdain for this book in words, but I'll give it a shot. I read this book about three years ago and just had to re-read it for book club. It was a steaming pile of crap then and, guess what?, it's a steaming pile of crap now. The main reason I hate this book: it's trite inspirational literature dressed up as an adventure quest. You go into it thinking that it's going to be about a boy's quest for treasure. If you read the back, there are words like "Pyramids," "Gypsy," "alchemist." Turns out, this is just The Purpose Driven Life dressed up with a little fable. It's Hallmark Hall of Fame territory set in an exotic locale. Which pisses me off to no end as I normally try to dodge that sort of thing, but here it is masquerading as the type of book I normally like. It's cliche, didactic, and poorly written.
+                </p>
+            </div>
+            <div id="comment">
+                <p>Sarah: I feel like everyone LOVES this book, but I was kind of underwhelmed. I know that translation affects the quality of writing, but I could not get into this writing style. At all. I felt like it was totally affected and contrived. He was going for this "fable/parable" style, but it seemed to fail miserably. The parable-like quality was totally contrived, and I thought the "moral" was pretty stupid.
+                    Moral: everything you want and need is close to home. Take chances. Follow your "personal legacy."</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+h5{
+    color:  #450202;
+}
+button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="mockingbird.jpg" alt="Book 1">
+                </div>  
+               
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>To Kill a Mockingbird</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>To Kill a Mockingbird is primarily a novel about growing up under extraordinary circumstances in the 1930s in the Southern United States. The story covers a span of three years, during which the main characters undergo significant changes. Scout Finch lives with her brother Jem and their father Atticus in the fictitious town of Maycomb, Alabama. Maycomb is a small, close-knit town, and every family has its social station depending on where they live, who their parents are, and how long their ancestors have lived in Maycomb.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span>Harper Lee</p>
+                <hr>
+                <a id="purchase-button" href="https://www.amazon.com.tr/Kill-Mockingbird-Harperperennial-Modern-Classics/dp/0060935464?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1UNQM1SR2CHM">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Eddie Allen: While the plot was very gripping and well-written, the book didn't actually instruct me on how to kill a mockingbird. I bought this book intending to do away with this obnoxious bird that's always sitting in my backyard and making distracting noises. I had hoped this book would shed some light on how to humanely dispose of the bird, but unfortunately it was this story about a lawyer and a falsely-accused criminal. As I said, the plot is great but nowhere in the book does it say exactly how to kill a mockingbird.</p>
+            </div>
+            <div id="comment">
+                <p>Fatima: In the course of 5 years, I’ve read this book nearly 17 times. That adds up to reading it once at least every 4 months, on an average. And I still return to this book like a bark seeking a lighthouse in the dark. When I first finished it, I was so overwhelmed by how much I related to it, I read it nearly 8 times before the year ended. By now I’ve memorized almost every scene and I still can’t shake off the feeling that I still have to learn a lot from it. </p>
+            </div>
+            <div id="comment">
+                <p>Lisa: I love how Scout is adamant about who she is. Others keep trying to tell her who to be, what it is to be a female. However, she wants to play, get dirty, run around with her brother. She couldn't care less about wearing dresses and sitting perfectly upright in a chair with knees pressed together in shoes you can't walk in.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

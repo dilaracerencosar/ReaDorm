@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+     
+h5{
+    color:  #450202;
+}
+button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+        
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="lights.jpg" alt="Book 1">
+                </div>  
+
+               
+      
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>All the Light We Cannot See</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>Anthony Doerr’s All the Light We Cannot See tells the story of two teenagers during World War II (WWII), one a blind girl in Nazi-occupied France, the other a German orphan boy pressed into service by the Nazi army.
+
+                    Marie-Laure LeBlanc evacuates Paris with her father after he is entrusted with a valuable diamond named the Sea of Flames. They escape to her great-uncle Etienne’s house in Saint-Malo, where her father is arrested. Marie-Laure becomes part of the French resistance effort. She and Etienne use his contraband radio to broadcast information to the Allies.
+                    
+                    Meanwhile, a brilliant German boy named Werner Pfennig seems doomed to spend his life in a coal mine—but instead receives an invitation to a Nazi school. Leaving behind his sister, Werner sacrifices everything he believes in to pursue his dream of becoming a scientist. Werner is pressed into military service and becomes part of a team assigned with the mission of locating and destroying anti-German radio broadcasts.
+                    
+                    While Werner is in Saint-Malo hunting Marie-Laure’s radio broadcasts, Allied bombers attack the city. In separate locations, both Werner and Marie-Laure are trapped. Eventually Marie-Laure’s broadcasts save Werner’s life, and in return, he finds her and saves her from a German officer who is prepared to kill her in his search for the Sea of Flames diamond.</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span>Anthony Doerr</p>
+                <hr>
+                <a id="purchase-button" href="https://www.amazon.com.tr/All-Light-We-Cannot-See/dp/0007548699?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1EVQM78Q9Z4O7">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Maciek: This is a carefully constructed book which is bound to captivate a large audience and become very popular, and be blessed with many warm reviews - it was chosen by Goodreads members as the best historical fiction of 2014, and shortlisted for the National Book Award. There are multiple reasons for its success - but they are also the same reasons as to why I didn't enjoy it as much as I hoped I would.</p>
+            </div>
+            <div id="comment">
+                <p>Chrissie: All readers must agree that the flipping back and forth between different time periods makes this book more confusing. I believe it must be said loudly and clearly that the current fascination with multiple threads and time shifts is only acceptable when they add something to the story, when employment of such improves the story. In this book they do not improve the story.</p>
+            </div>
+            <div id="comment">
+                <p>Jim: This is a great book. Its very high ratings (4.3; half of the ratings are "5's") renews my faith that GR ratings count for something. With almost 50,000 reviews on GR I don’t feel there is a lot for me to add but here’s a brief summary of the plot and I’ll give a few examples of the great literary writing.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+    
+
+</body>
+</html>

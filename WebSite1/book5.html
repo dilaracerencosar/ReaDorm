@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book2.css">
+    <script src="https://kit.fontawesome.com/ae7ab48eb0.js" crossorigin="anonymous"></script>
+    <style>
+       
+ h5{
+     color:  #450202;
+ }
+ button {
+  background-color: #1F4502;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#instagram-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            text-align: center;
+        }
+
+        header a {
+            float: right;
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Add transition for hover effect */
+        }
+        header a:hover {
+            color: #ffdb8e; /* Change text color on hover */
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        ReaDorm
+       <a href="proje.aspx">Sign In</a>
+   </header>
+        
+            <div id="nav-content" tabindex="0">
+                <ul>
+                    <li><a href="pagehome.html">Home</a></li>
+                    <li><a href="proje1.html">Main Page</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="small">
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="#0" onclick="showInstagramPopup()"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#0" onclick="showInstagramPopup()"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+    <br>
+    <div class="bookPage">
+        <div id="bookPage-left">
+            <div id="book-image">
+                <div>
+                    <img id="responsiveImg" src="stranger.jpg" alt="Book 5">
+                </div>    
+                
+            </div>
+        </div>
+        <div id="bookPage-right">
+            <div id="book-details">
+                <h2>Stranger</h2>
+                <p id="summary"><span style="color: #450202;"><strong>Summary:</strong></span>Published in 1942 by French author Albert Camus, The Stranger has long been considered a classic of twentieth-century literature. Le Monde ranks it as number one on its "100 Books of the Century" list. Through this story of an ordinary man unwittingly drawn into a senseless murder on a sundrenched Algerian beach, Camus explores what he termed "the nakedness of man faced with the absurd."</p>
+                <hr>
+                <p id="writer"><span style="color: #450202;"><strong>Writer:</strong></span> Albert Camus</p>
+                <hr>
+                <a id="purchase-button" href="https://www.dr.com.tr/Kitap/The-Stranger-International-Edition/Foreign-Languages/Literature-and-Novel/Classics/urunno=0001989167001" target="_blank">Purchase</a>
+            </div>
+        </div>
+        <div id="commentsBlock">
+            <div id="comment">
+                <p>Ryan: The book is simply written and a rather quick read, but the depth Camus manages to convey through this simplicity is astounding. I think a problem a lot of people have with this book is that they fail to look beyond the whole "what is the meaning of life" message. While an interesting question, the book raises so many other philosophical questions beyond this. What I found the most interesting of these is "what truly defines humanity or makes someone human?" During Meursault's trial, he is constantly accused of not showing remorse and therefore as being cold and inhuman. He is most definitely human though, just rather detached. This raises the question of whether one should be expected to exhibit certain characteristics in certain situations to "keep their humanity".</p>
+            </div>
+            <div id="comment">
+                <p>Penkevich: Even if we exist in a world devoid of meaning, why is it that our actions still bear so much weight? The crime and punishment of Nobel Prize winning author Albert Camus’ academically canonized The Stranger depicts the ironies of enforcing meaning in a void and the absurdities that surround us as humans walking towards the same cold, lifeless fate. ‘Since we're all going to die,’ writes narrator Meursault, ‘it's obvious that when and how don't matter.’ Yet, when and how define a life, especially when the the why is a direct consequence of a life lived, though do our lives truly matter at all? These questions rattle across the pages of this fantastic character study revolving around a courtroom character judgement of the narrator, a courtroom of suits flanking a judge that might as well be angels flanking the pearly gates of Christian lore. The Stranger is a lesson in absurdity and investigative analysis of a life faced with the ‘benign indifference of the world’.</p>
+            </div>
+            <div id="comment">
+                <p>Chris: If every few words of praise I’ve seen for “The Stranger” over my lifetime materialized into small chunks of rock in space, there’d be enough sh!t to conjure up the Oort Cloud. Much like this distant collection of debris bordering the outer solar system, I can’t really comprehend the acclaim heaped on this story, but luckily, like the Cloud, it’s usually out of sight, out of mind, and has absolutely no discernable current influence on my life. And just like the Oort can occasionally spit a chunk of sh!t at the earth and devastate all life upon it, so too can I hear/read some lip service paid to “The Stranger” resulting in my transition to Freak-Out Mode, resulting in me slapping someone in the face, usually someone I have to deal with again at some point in time (if only in court).</p>
+            </div>
+        </div>
+    </div>
+    <div id="instagram-popup">
+
+        <p>We are currently working on this :)</p>
+        <button onclick="closeInstagramPopup()">Close</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function showInstagramPopup() {
+          
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('instagram-popup').style.display = 'block';
+        }
+    
+        function closeInstagramPopup() {
+           
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('instagram-popup').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>
